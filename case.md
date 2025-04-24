@@ -98,8 +98,10 @@ class NotifySenderCreator{
 		return new EmailNotifySender();
 	}
 }
+```
 
 **NotifyLogger** - логгер произошедшего. фиксирует в лог все "успешные" отправки. И "неуспешные" тоже.
+```
 interface NotifyLogger {
 	public function log_error(NotifyDTO $NotifyDTO) : bool;
 	public function log_success(NotifyDTO $NotifyDTO) : bool;
